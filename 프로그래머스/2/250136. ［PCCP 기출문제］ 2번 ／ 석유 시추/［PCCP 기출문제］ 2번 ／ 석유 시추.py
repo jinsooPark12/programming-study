@@ -11,7 +11,7 @@ def solution(land):
         count = 0                                
         visited[a][b] = 1
         q = deque()
-        q.append((a,b))                          # deque q에 a,b를 튜플 형태로 저장
+        q.append((a,b))                          # deque q에 a,b를 저장
         min_y, max_y = b, b                      # 계산의 결과값을 result에 저장하기 위한 범위
         while q:                                 # 석유 덩어리를 확인하고 계산하는 반복문, q에 요소가 있다면 참
             x,y = q.popleft()                    # q의 요소가 x와 y에 선입선출
