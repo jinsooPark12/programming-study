@@ -1,8 +1,11 @@
 def solution(phone_book):
-    phone_book.sort()
-    for i in range(len(phone_book)-1):
-        num1 = phone_book[i]
-        num2 = phone_book[i+1]
-        if num1 == num2[:len(num1)]:
-            return False
+    hash = dict()
+    for i in phone_book:
+        hash[i] = 1
+    for j in phone_book:
+        target = ""
+        for k in j:
+            target += k
+            if target in hash and target != j:
+                return False
     return True
