@@ -2,7 +2,7 @@ def solution(sticker):
     index = len(sticker)
     dp1 = [sticker[i] for i in range(0, index-1)]
     dp2 = [sticker[j] for j in range(1, index)]
-    
+
     if index <= 2:
         return max(sticker)
 
