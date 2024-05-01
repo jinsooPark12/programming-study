@@ -9,13 +9,9 @@ def solution(sticker):
     for i in range(1, index-1):
         if i == 1:
             dp1[i] = max(dp1[i-1], dp1[i])
+            dp2[i] = max(dp2[i-1], dp2[i])
         else:
             dp1[i] = max(dp1[i-1], dp1[i-2] + dp1[i])
-
-    for j in range(1, index-1):
-        if j == 1:
-            dp2[j] = max(dp2[j-1], dp2[j])
-        else:
-            dp2[j] = max(dp2[j-1], dp2[j-2] + dp2[j])
+            dp2[i] = max(dp2[i-1], dp2[i-2] + dp2[i])
 
     return max(dp1[index-2], dp2[index-2])
