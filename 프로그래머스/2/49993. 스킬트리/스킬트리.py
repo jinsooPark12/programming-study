@@ -5,8 +5,7 @@ def solution(skill, skill_trees):
         for j in i:
             if j in skill:
                 user_skill += j
-        if user_skill == "":
+        if user_skill == skill[:len(user_skill)]:
             answer += 1
-        elif user_skill == skill[:len(user_skill)]:
-            answer += 1
+
     return answer
