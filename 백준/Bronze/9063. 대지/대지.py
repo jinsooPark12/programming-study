@@ -1,8 +1,9 @@
-n = int(input())
-max_x, min_x = -99999, 99999
-max_y, min_y = -99999, 99999
-for i in range(n):
-    x,y = map(int, input().split())
+import sys
+max_x = max_y = -9999999
+min_x = min_y = 9999999
+
+for _ in range(int(sys.stdin.readline())):
+    x,y = map(int, sys.stdin.readline().split())
     if x > max_x:
         max_x = x
     if x < min_x:
@@ -11,7 +12,5 @@ for i in range(n):
         max_y = y
     if y < min_y:
         min_y = y
-total_x = max_x - min_x
-total_y = max_y - min_y
-answer = total_x * total_y
-print(answer)
+
+print((max_x - min_x)*(max_y - min_y))
