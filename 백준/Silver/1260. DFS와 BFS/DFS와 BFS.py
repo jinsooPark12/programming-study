@@ -1,4 +1,6 @@
 from collections import deque
+import sys
+input = sys.stdin.readline
 
 def dfs(graph, start, visited):
     visited[start] = True
