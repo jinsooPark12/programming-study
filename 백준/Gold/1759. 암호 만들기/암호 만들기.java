@@ -29,6 +29,7 @@ public class Main {
         combination("", 0, 0, 0, 0);
     }
     
+    // flag1이 모음의 개수, flag2가 자음의 개수
     static void combination(String ans, int idx, int cnt, int flag1, int flag2) {
         String checkTxt = "aeiou";
 
